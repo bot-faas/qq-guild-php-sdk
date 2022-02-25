@@ -1,0 +1,13 @@
+{
+  "name": "bot-faas/qq-guild-php-sdk",
+  "description": "A short description of what your package does",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "BotFaas\\QQGuild\\": "src/"
+    }
+  }
+}
