@@ -1,7 +1,18 @@
 <?php
 
+namespace BotFaas\QQGuild;
+
 class OpenApi
 {
+    /**
+     * @var string
+     */
+    private $Authorization;
+    /**
+     * @var string
+     */
+    private $url;
+
     public function __construct($bot_app_id, $bot_token, $isSandBox = false)
     {
         $this->Authorization = "Bot {$bot_app_id}.{$bot_token}";
@@ -11,7 +22,7 @@ class OpenApi
             $this->url = 'https://api.sgroup.qq.com';
         }
     }
-    
+
     public function request($funcName, $method = 'GET', $data = '')
     {
         try {
