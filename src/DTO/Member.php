@@ -11,5 +11,5 @@ class Member
      * @var User
      */
     public $user;
-    public array $roles;
+    public $roles;
 }

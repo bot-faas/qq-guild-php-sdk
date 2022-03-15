@@ -9,5 +9,5 @@ class ArkKv
 	/**
 	 * @var ArkObj[] $obj
 	 */
-	public array $obj;
+	public $obj;
 }

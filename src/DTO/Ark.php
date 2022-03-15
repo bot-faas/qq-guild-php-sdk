@@ -9,5 +9,5 @@ class Ark
 	 * ArkKv数组
 	 * @var ArkKv[] $kv
 	 */
-	public array $kv;
+	public $kv;
 }

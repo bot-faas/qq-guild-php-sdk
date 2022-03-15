@@ -11,5 +11,5 @@ class Embed
 	/**
 	 * @var EmbedField[]
 	 */
-	public array $fields;
+	public $fields;
 }

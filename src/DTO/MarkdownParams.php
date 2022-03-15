@@ -8,5 +8,5 @@ class MarkdownParams
     /**
      * @var string[] $values
      */
-    public array $values;
+    public $values;
 }

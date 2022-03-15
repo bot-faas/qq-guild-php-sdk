@@ -32,17 +32,17 @@ class Message
      * 附件
      * @var MessageAttachment[] $attachments
      */
-    public array $attachments;
+    public $attachments;
     /**
      * 结构化消息-embeds
      * @var Embed[] $embeds
      */
-    public array $embeds;
+    public $embeds;
     /**
      * 消息中的提醒信息(@)列表
      * @var User[] $mentions
      */
-    public array $mentions;
+    public $mentions;
     /**
      * ark 消息
      * @var Ark $ark
