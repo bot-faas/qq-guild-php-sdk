@@ -6,9 +6,8 @@ use BotFaas\QQGuild\OpenAPI;
 
 $openapi = new OpenAPI('app_id', 'app_token');
 
-$msg = new MessageToCreate();
-
-$msg->content = '看看猫咪';
-$data = $openapi->MessageAPI()->PostMessage('channel_id', $msg);
+$data = $openapi->MessageAPI()->PostMessage('channel_id', new MessageToCreate([
+    'content' => '看看猫咪'
+]));
 
 print_r($data);
