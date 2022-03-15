@@ -2,16 +2,16 @@
 
 namespace BotFaas\QQGuild;
 
-class OpenApi
+class OpenAPI
 {
     /**
      * @var string
      */
-    private $Authorization;
+    private string $Authorization;
     /**
      * @var string
      */
-    private $url;
+    private string $url;
 
     public function __construct($bot_app_id, $bot_token, $isSandBox = false)
     {
@@ -23,7 +23,7 @@ class OpenApi
         }
     }
 
-    public function request($funcName, $method = 'GET', $data = '')
+    public function request($funcName, $method = 'GET', $data = null)
     {
         try {
             $ch = curl_init();
@@ -34,7 +34,7 @@ class OpenApi
             curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($ch, CURLOPT_HEADER, false);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            if ($data != '') {
+            if ($data) {
                 $data = json_encode($data);
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
             }
@@ -60,4 +60,8 @@ class OpenApi
         }
     }
 
+    public function MessageAPI(): MessageAPI
+    {
+        return new MessageAPI($this);
+    }
 }
