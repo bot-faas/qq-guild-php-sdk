@@ -18,10 +18,16 @@ class Message
     public string $edited_timestamp;
     // 是否@all
     public bool $mention_everyone;
-    // 消息发送方
-    public User $author;
-    // 消息发送方Author的member属性，只是部分属性
-    public Member $member;
+    /**
+     * 消息发送方
+     * @var User
+     */
+    public $author;
+    /**
+     * 消息发送方Author的member属性，只是部分属性
+     * @var Member
+     */
+    public $member;
     /**
      * 附件
      * @var MessageAttachment[] $attachments
@@ -37,8 +43,11 @@ class Message
      * @var User[] $mentions
      */
     public array $mentions;
-    // ark 消息
-    public Ark $ark;
+    /**
+     * ark 消息
+     * @var Ark $ark
+     */
+    public $ark;
     // 私信消息
     public bool $direct_message;
     // 子频道 seq，用于消息间的排序，seq 在同一子频道中按从先到后的顺序递增，不同的子频道之前消息无法排序
